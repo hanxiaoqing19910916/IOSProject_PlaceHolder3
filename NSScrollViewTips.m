@@ -33,3 +33,12 @@ self.scrollView.magnification = 2;
 5.禁止滚动
 [_textScrollView setVerticalLineScroll:0.0];
 [_textScrollView setVerticalPageScroll:0.0];
+
+6.增加流动的view（滚动内容的时候可竖直方向一直可见，也可以水平方向一直可见）
+NSView *dView = [[NSView alloc] init];
+dView.wantsLayer = YES;
+dView.layer.backgroundColor = [NSColor redColor].CGColor;
+[dView setFrameSize:CGSizeMake(50, 50)];
+[self.scrollView addFloatingSubview:dView forAxis:NSEventGestureAxisHorizontal];
+NSEventGestureAxisHorizontal //水平总可见
+NSEventGestureAxisVertical //竖直总可见
