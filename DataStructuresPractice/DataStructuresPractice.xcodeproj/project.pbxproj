@@ -13,6 +13,7 @@
 		8AC8D92F1E83672A00C5C2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC8D92D1E83672A00C5C2E8 /* Main.storyboard */; };
 		8AC8D9311E83672A00C5C2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC8D9301E83672A00C5C2E8 /* Assets.xcassets */; };
 		8AC8D9341E83672A00C5C2E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC8D9321E83672A00C5C2E8 /* LaunchScreen.storyboard */; };
+		8AD367951E8F40C000DF752C /* BTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD367931E8F40C000DF752C /* BTree.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8AC8D9301E83672A00C5C2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AC8D9331E83672A00C5C2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AC8D9351E83672A00C5C2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD367931E8F40C000DF752C /* BTree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BTree.c; sourceTree = "<group>"; };
+		8AD367941E8F40C000DF752C /* BTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTree.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,9 @@
 		8AC8D9231E83672A00C5C2E8 /* DataStructuresPractice */ = {
 			isa = PBXGroup;
 			children = (
+				8AD367971E8F40E600DF752C /* LinkList */,
+				8AD367961E8F40CF00DF752C /* Stack */,
+				8AD367921E8F40C000DF752C /* Tree */,
 				8AC8D9271E83672A00C5C2E8 /* AppDelegate.h */,
 				8AC8D9281E83672A00C5C2E8 /* AppDelegate.m */,
 				8AC8D92A1E83672A00C5C2E8 /* ViewController.h */,
@@ -77,6 +83,29 @@
 				8AC8D9251E83672A00C5C2E8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AD367921E8F40C000DF752C /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				8AD367931E8F40C000DF752C /* BTree.c */,
+				8AD367941E8F40C000DF752C /* BTree.h */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		8AD367961E8F40CF00DF752C /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		8AD367971E8F40E600DF752C /* LinkList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LinkList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +181,7 @@
 			files = (
 				8AC8D92C1E83672A00C5C2E8 /* ViewController.m in Sources */,
 				8AC8D9291E83672A00C5C2E8 /* AppDelegate.m in Sources */,
+				8AD367951E8F40C000DF752C /* BTree.c in Sources */,
 				8AC8D9261E83672A00C5C2E8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +343,7 @@
 				8AC8D93A1E83672A00C5C2E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
