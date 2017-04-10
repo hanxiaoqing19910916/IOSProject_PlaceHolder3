@@ -17,6 +17,48 @@ struct _tag_BTree
     BTreeNode *root;
 };
 
+static void recursive_display(BTreeNode* node, BTree_Printf* pFunc, int format, int gap, char div) // O(n)
+{
+    int i = 0;
+    
+    if( (node != NULL) && (pFunc != NULL) )
+    {
+        for(i=0; i<format; i++)
+        {
+            printf("%c", div);
+        }
+        
+        pFunc(node);
+        
+        printf("\n");
+        
+        if( (node->left != NULL) || (node->right != NULL) )
+        {
+            recursive_display(node->left, pFunc, format + gap, gap, div);
+            recursive_display(node->right, pFunc, format + gap, gap, div);
+        }
+    }
+    else
+    {
+        for(i=0; i<format; i++)
+        {
+            printf("%c", div);
+        }
+        printf("\n");
+    }
+}
+
+
+void BTree_Display(BTree* tree, BTree_Printf* pFunc, int gap, char div) // O(n)
+{
+    TBTree* btree = (TBTree*)tree;
+    
+    if( btree != NULL )
+    {
+        recursive_display(btree->root, pFunc, 0, gap, div);
+    }
+}
+
 
 BTree* BTree_Create()
 {
@@ -69,30 +111,51 @@ int BTree_Insert(BTree* tree, BTreeNode* node, BTPos pos, int count, int flag)
         node->left = NULL;
         node->right = NULL;
         
+        BTreeNode *parent = NULL;
+        
         // 定义一个current指针指向当前节点
         BTreeNode *current = btree->root;
         
+        while (current != NULL && count != 0) {
+            
+            bit = pos & 1;
+            pos = pos >> 1;
+            
+            parent = current;
+            
+            if (bit == BT_LEFT) {
+                current = current->left;
+            }
+            
+            if (bit == BT_RIGHT) {
+                current = current->right;
+            }
+            count--;
+        }
+        // while过后，current指向当前要插入替换的节点，parent指向current父节点
         
+        // 通过flag得知current节点作为新插入node节点的左子树还是右子数
+        if (flag == BT_LEFT) {
+            node ->left = current;
+        } else if (flag == BT_RIGHT) {
+            node ->right = current;
+        }
         
+        if (parent != NULL) {
+            
+            if (bit == BT_LEFT) {
+                parent->left = node;
+            }
+            if (bit == BT_RIGHT) {
+                parent->right = node;
+            }
+            
+        }  else {
+            btree ->root = node;
+        }
+        
+        btree->count++;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     return ret;
-
 }
