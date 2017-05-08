@@ -16,5 +16,15 @@
 //2016腾讯软件开发面试题    http://blog.csdn.net/Two_Water/article/details/55071376
 
 
+//从头到尾彻底解析哈希表算法 http://blog.jobbole.com/49229/
+
+//二分查找  http://wap.cnblogs.com/78869/2428375.html?full=1
+
+//时间复杂度为o，怎么找出一个栈里的最大元素
+//http://blog.csdn.net/gengdidi/article/details/48625317
+//http://blog.csdn.net/datiancai2008/article/details/11067765
+//https://zhidao.baidu.com/question/1831456532013168220.html
+
+
 
 #endif 
