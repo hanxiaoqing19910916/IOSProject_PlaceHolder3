@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  main.c
 //  DataStructuresPractice
 //
-//  Created by hanxiaoqing on 2017/3/23.
+//  Created by hanxiaoqing on 2017/5/8.
 //  Copyright © 2017年 BabelTime. All rights reserved.
 //
 
-#import "ViewController.h"
+#include <stdio.h>
 #include "BTree.h"
 
 struct Node
@@ -22,16 +22,9 @@ void printf_data(BTreeNode* node)
         printf("%c", ((struct Node*)node)->v);
     }
 }
-@interface ViewController ()
 
-@end
 
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+int main(int argc, const char * argv[]) {
     
     struct Node n1 = {{NULL, NULL}, 'A'};
     struct Node n2 = {{NULL, NULL}, 'B'};
@@ -47,9 +40,6 @@ void printf_data(BTreeNode* node)
     BTree_Insert(tree, (BTreeNode *)&n3, 1, 1, 0);
     
     BTree_Display(tree, printf_data, 4, '-');
-    
+
+    return 0;
 }
-
-
-
-@end
