@@ -21,6 +21,9 @@
  不是keywindow，这个window会成为keywindow同时会丢弃掉这个Mouse-down。然而一个view可以
  规避这个默认行为，通过重写NSView的acceptsFirstMouse:方法返回YES.
  
- 
+ view自动接收点击和拖拽（mouse-clicked and mouse-dragged）事件 不过由于鼠标移动
+ （mouse-moved）事件会频繁的产生并且会阻塞事件队列，一个view必须明确的请求它的所属window去监
+ 听它的，通过window一个setAcceptsMouseMovedEvents:方法。定义在Other Event Dispatching
+ 文档说明中的追踪视图矩形区域的方法，是跟随鼠标移动位置的一个相对节省性能的方式。
  
  */

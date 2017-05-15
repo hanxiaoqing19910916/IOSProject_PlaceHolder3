@@ -23,16 +23,15 @@ void printf_data(BTreeNode* node)
     }
 }
 
-
-int main(int argc, const char * argv[]) {
-    
+void testBtree()
+{
     struct Node n1 = {{NULL, NULL}, 'A'};
     struct Node n2 = {{NULL, NULL}, 'B'};
     struct Node n3 = {{NULL, NULL}, 'C'};
     
-    struct Node n4 = {{NULL, NULL}, 'D'};
-    struct Node n5 = {{NULL, NULL}, 'E'};
-    struct Node n6 = {{NULL, NULL}, 'F'};
+//    struct Node n4 = {{NULL, NULL}, 'D'};
+//    struct Node n5 = {{NULL, NULL}, 'E'};
+//    struct Node n6 = {{NULL, NULL}, 'F'};
     
     BTree *tree = BTree_Create();
     BTree_Insert(tree, (BTreeNode *)&n1, 0, 0, 0);
@@ -40,6 +39,28 @@ int main(int argc, const char * argv[]) {
     BTree_Insert(tree, (BTreeNode *)&n3, 1, 1, 0);
     
     BTree_Display(tree, printf_data, 4, '-');
+}
+
+
+void testStrLength()
+{
+    int length = stringLength("www");
+    printf("stringLength %d \n",length);
+}
+
+void testFabonacci()
+{
+    for (int i = 0; i < 10; i++) {
+        int value = fabonacci(i);
+        printf("%d \n",value);
+    }
+}
+
+int main(int argc, const char * argv[]) {
+    
+    testFabonacci();
+//    char *c = "idfaos";
+
 
     return 0;
 }
