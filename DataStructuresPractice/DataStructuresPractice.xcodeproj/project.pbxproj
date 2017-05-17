@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8ABA9F2E1EC94AE4006DFB7D /* recursion.c in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA9F2D1EC94AE4006DFB7D /* recursion.c */; };
+		33C6B8A31ECB3FF60025A97A /* recursion.c in Sources */ = {isa = PBXBuildFile; fileRef = 33C6B8A21ECB3FDD0025A97A /* recursion.c */; };
 		8ACE397E1EC018E5000D0E76 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE397D1EC018E5000D0E76 /* main.c */; };
 		8ACE39871EC01904000D0E76 /* BTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE39851EC01904000D0E76 /* BTree.c */; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8ABA9F2D1EC94AE4006DFB7D /* recursion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = recursion.c; sourceTree = "<group>"; };
+		33C6B8A21ECB3FDD0025A97A /* recursion.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = recursion.c; sourceTree = "<group>"; };
 		8ACE397A1EC018E5000D0E76 /* DataStructuresPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructuresPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACE397D1EC018E5000D0E76 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		8ACE39851EC01904000D0E76 /* BTree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BTree.c; sourceTree = "<group>"; };
@@ -44,12 +44,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8ABA9F2C1EC94AD1006DFB7D /* recursion */ = {
+		33C6B8A11ECB3FDD0025A97A /* Recursion */ = {
 			isa = PBXGroup;
 			children = (
-				8ABA9F2D1EC94AE4006DFB7D /* recursion.c */,
+				33C6B8A21ECB3FDD0025A97A /* recursion.c */,
 			);
-			path = recursion;
+			path = Recursion;
 			sourceTree = "<group>";
 		};
 		8ACE39711EC018E5000D0E76 = {
@@ -71,7 +71,7 @@
 		8ACE397C1EC018E5000D0E76 /* DataStructuresPractice */ = {
 			isa = PBXGroup;
 			children = (
-				8ABA9F2C1EC94AD1006DFB7D /* recursion */,
+				33C6B8A11ECB3FDD0025A97A /* Recursion */,
 				8ACE39841EC01904000D0E76 /* Tree */,
 				8ACE397D1EC018E5000D0E76 /* main.c */,
 				8ACE39881EC0198C000D0E76 /* WrittenQuestionsCollection.h */,
@@ -147,7 +147,7 @@
 			files = (
 				8ACE39871EC01904000D0E76 /* BTree.c in Sources */,
 				8ACE397E1EC018E5000D0E76 /* main.c in Sources */,
-				8ABA9F2E1EC94AE4006DFB7D /* recursion.c in Sources */,
+				33C6B8A31ECB3FF60025A97A /* recursion.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
