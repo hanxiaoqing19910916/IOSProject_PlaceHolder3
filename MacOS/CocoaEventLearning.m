@@ -45,7 +45,16 @@
  The Path of Key Events（键盘事件的传递路径）
  
  以下是对键盘事件传递路径详细描述，按照应用对每个键盘事件的评估的顺序。
- 1.Key equivalents 是一个按键或者组合
+ 1.Key equivalents 是一个按键或者组合（通常是一个按键被command键改变）在应用程序中通常绑定到
+ 某些菜单项或控件对象。按下组合键类似于控制点击或者选择菜单的动作
+ 
+ 应用对象通过不断向下检索视图view层次来处理Key equivalents，向每个view发送
+ performKeyEquivalent: 消息直到某个view对象返回YES.如果所有的view层级都没有处理，NSApp会
+ 发送到菜单栏的菜单项目。一些cooca类NSButton, NSMenu, NSMatrix,  NSSavePanel提供了一些默认的
+ 实现 欲了解更多, 参考 Handling Key Equivalents
+ 
+ 
+ 
  
  
  
