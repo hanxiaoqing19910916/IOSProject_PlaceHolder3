@@ -53,6 +53,8 @@
  发送到菜单栏的菜单项目。一些cooca类NSButton, NSMenu, NSMatrix,  NSSavePanel提供了一些默认的
  实现 欲了解更多, 参考 Handling Key Equivalents
  
+ Handling Key Events
+ 
  
  
  
