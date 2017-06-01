@@ -28,4 +28,6 @@
 // leetcode 答案
 //http://www.jiuzhang.com/solutions/
 
+//http://blog.jobbole.com/110835/?utm_source=blog.jobbole.com&utm_medium=relatedPosts
+
 #endif 
