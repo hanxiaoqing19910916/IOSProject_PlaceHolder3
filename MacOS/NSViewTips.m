@@ -16,6 +16,10 @@ View：
 每次drawRect的调用都会触发所有子view的drawRect
 尤其是BaseVcView的setNeedsDisplay=YES的时候，会触发内部所有子view的drawRect
 
+// NSView 可以在frame改变的时候发出通知 可以用这个属性控制是否发出
+// 可以利用这个特性实现一个类似ios的 layoutSubViews方法
+@property BOOL postsFrameChangedNotifications;
+
 
 
 
