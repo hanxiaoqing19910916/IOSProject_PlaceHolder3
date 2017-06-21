@@ -30,4 +30,7 @@
 
 //http://blog.jobbole.com/110835/?utm_source=blog.jobbole.com&utm_medium=relatedPosts
 
+// 快速排序
+//http://www.cnblogs.com/MOBIN/p/4681369.html
+
 #endif 
