@@ -7,16 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A9B0A111F00F5460033F07F /* KVCExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B0A101F00F5460033F07F /* KVCExample.m */; };
 		8ABFA4271EFCE6A700D2ECCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFA4261EFCE6A700D2ECCD /* main.m */; };
 		8ABFA42A1EFCE6A700D2ECCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFA4291EFCE6A700D2ECCD /* AppDelegate.m */; };
 		8ABFA42D1EFCE6A700D2ECCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFA42C1EFCE6A700D2ECCD /* ViewController.m */; };
 		8ABFA4301EFCE6A700D2ECCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFA42E1EFCE6A700D2ECCD /* Main.storyboard */; };
 		8ABFA4321EFCE6A700D2ECCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFA4311EFCE6A700D2ECCD /* Assets.xcassets */; };
 		8ABFA4351EFCE6A700D2ECCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFA4331EFCE6A700D2ECCD /* LaunchScreen.storyboard */; };
-		8ABFA43E1EFCE6D000D2ECCD /* KVCExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFA43D1EFCE6D000D2ECCD /* KVCExample.m */; };
+		8AFDF2AB1F00F68F005FCBB8 /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFDF2A21F00F666005FCBB8 /* libProtocolBuffers.a */; };
+		8AFDF2AF1F00F765005FCBB8 /* Immessage.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDF2AD1F00F765005FCBB8 /* Immessage.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8AFDF2B01F00F765005FCBB8 /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 8AFDF2AE1F00F765005FCBB8 /* IMMessage.proto */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8AFDF2A11F00F666005FCBB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFDF2991F00F666005FCBB8 /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7461B52E0F94FAF800A0C422;
+			remoteInfo = ProtocolBuffers;
+		};
+		8AFDF2A31F00F666005FCBB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFDF2991F00F666005FCBB8 /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BBEA4A6147C727100C4ADB7;
+			remoteInfo = UnitTests;
+		};
+		8AFDF2A51F00F666005FCBB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFDF2991F00F666005FCBB8 /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9A5EA51831993600A9D33B;
+			remoteInfo = iOSTestHarness;
+		};
+		8AFDF2A71F00F666005FCBB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFDF2991F00F666005FCBB8 /* ProtocolBuffers_iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4487C6E1A9F8F8100531423;
+			remoteInfo = TestSingleSourceBuild;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8A9B0A0F1F00F5460033F07F /* KVCExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCExample.h; sourceTree = "<group>"; };
+		8A9B0A101F00F5460033F07F /* KVCExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCExample.m; sourceTree = "<group>"; };
 		8ABFA4221EFCE6A700D2ECCD /* iOSDeepStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeepStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABFA4261EFCE6A700D2ECCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ABFA4281EFCE6A700D2ECCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +63,10 @@
 		8ABFA4311EFCE6A700D2ECCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ABFA4341EFCE6A700D2ECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ABFA4361EFCE6A700D2ECCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ABFA43C1EFCE6D000D2ECCD /* KVCExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCExample.h; sourceTree = "<group>"; };
-		8ABFA43D1EFCE6D000D2ECCD /* KVCExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCExample.m; sourceTree = "<group>"; };
+		8AFDF2991F00F666005FCBB8 /* ProtocolBuffers_iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers_iOS.xcodeproj; path = ProcolBuffer/Depend/ProtocolBuffers_iOS.xcodeproj; sourceTree = "<group>"; };
+		8AFDF2AC1F00F765005FCBB8 /* Immessage.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Immessage.pbobjc.h; path = ProcolBuffer/Immessage.pbobjc.h; sourceTree = "<group>"; };
+		8AFDF2AD1F00F765005FCBB8 /* Immessage.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Immessage.pbobjc.m; path = ProcolBuffer/Immessage.pbobjc.m; sourceTree = "<group>"; };
+		8AFDF2AE1F00F765005FCBB8 /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IMMessage.proto; path = ProcolBuffer/IMMessage.proto; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,12 +74,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFDF2AB1F00F68F005FCBB8 /* libProtocolBuffers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A9B0A0E1F00F5460033F07F /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+				8A9B0A0F1F00F5460033F07F /* KVCExample.h */,
+				8A9B0A101F00F5460033F07F /* KVCExample.m */,
+			);
+			path = KVC;
+			sourceTree = "<group>";
+		};
 		8ABFA4191EFCE6A700D2ECCD = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +109,11 @@
 		8ABFA4241EFCE6A700D2ECCD /* iOSDeepStudy */ = {
 			isa = PBXGroup;
 			children = (
-				8ABFA43C1EFCE6D000D2ECCD /* KVCExample.h */,
-				8ABFA43D1EFCE6D000D2ECCD /* KVCExample.m */,
+				8AFDF2AC1F00F765005FCBB8 /* Immessage.pbobjc.h */,
+				8AFDF2AD1F00F765005FCBB8 /* Immessage.pbobjc.m */,
+				8AFDF2AE1F00F765005FCBB8 /* IMMessage.proto */,
+				8AFDF2991F00F666005FCBB8 /* ProtocolBuffers_iOS.xcodeproj */,
+				8A9B0A0E1F00F5460033F07F /* KVC */,
 				8ABFA4281EFCE6A700D2ECCD /* AppDelegate.h */,
 				8ABFA4291EFCE6A700D2ECCD /* AppDelegate.m */,
 				8ABFA42B1EFCE6A700D2ECCD /* ViewController.h */,
@@ -82,6 +133,17 @@
 				8ABFA4261EFCE6A700D2ECCD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AFDF29A1F00F666005FCBB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AFDF2A21F00F666005FCBB8 /* libProtocolBuffers.a */,
+				8AFDF2A41F00F666005FCBB8 /* UnitTests.xctest */,
+				8AFDF2A61F00F666005FCBB8 /* iOSTestHarness.app */,
+				8AFDF2A81F00F666005FCBB8 /* libTestSingleSourceBuild.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +192,12 @@
 			mainGroup = 8ABFA4191EFCE6A700D2ECCD;
 			productRefGroup = 8ABFA4231EFCE6A700D2ECCD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8AFDF29A1F00F666005FCBB8 /* Products */;
+					ProjectRef = 8AFDF2991F00F666005FCBB8 /* ProtocolBuffers_iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8ABFA4211EFCE6A700D2ECCD /* iOSDeepStudy */,
@@ -137,11 +205,43 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		8AFDF2A21F00F666005FCBB8 /* libProtocolBuffers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libProtocolBuffers.a;
+			remoteRef = 8AFDF2A11F00F666005FCBB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8AFDF2A41F00F666005FCBB8 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = 8AFDF2A31F00F666005FCBB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8AFDF2A61F00F666005FCBB8 /* iOSTestHarness.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSTestHarness.app;
+			remoteRef = 8AFDF2A51F00F666005FCBB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8AFDF2A81F00F666005FCBB8 /* libTestSingleSourceBuild.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTestSingleSourceBuild.a;
+			remoteRef = 8AFDF2A71F00F666005FCBB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		8ABFA4201EFCE6A700D2ECCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFDF2B01F00F765005FCBB8 /* IMMessage.proto in Resources */,
 				8ABFA4351EFCE6A700D2ECCD /* LaunchScreen.storyboard in Resources */,
 				8ABFA4321EFCE6A700D2ECCD /* Assets.xcassets in Resources */,
 				8ABFA4301EFCE6A700D2ECCD /* Main.storyboard in Resources */,
@@ -157,8 +257,9 @@
 			files = (
 				8ABFA42D1EFCE6A700D2ECCD /* ViewController.m in Sources */,
 				8ABFA42A1EFCE6A700D2ECCD /* AppDelegate.m in Sources */,
+				8AFDF2AF1F00F765005FCBB8 /* Immessage.pbobjc.m in Sources */,
 				8ABFA4271EFCE6A700D2ECCD /* main.m in Sources */,
-				8ABFA43E1EFCE6D000D2ECCD /* KVCExample.m in Sources */,
+				8A9B0A111F00F5460033F07F /* KVCExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(PROJECT)/ProcolBuffer/**";
 				INFOPLIST_FILE = iOSDeepStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HAN.iOSDeepStudy;
@@ -291,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(PROJECT)/ProcolBuffer/**";
 				INFOPLIST_FILE = iOSDeepStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HAN.iOSDeepStudy;
@@ -317,6 +420,7 @@
 				8ABFA43B1EFCE6A700D2ECCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
