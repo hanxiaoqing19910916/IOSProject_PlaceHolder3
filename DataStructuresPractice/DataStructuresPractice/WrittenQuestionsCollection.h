@@ -47,6 +47,7 @@
 首先是四个算法题：
 
 不用临时变量怎么实现 swap(a, b)——用加法或者异或都可以
+http://blog.csdn.net/kingoverlord/article/details/8825721
 
 二维有序数组查找数字——剑指 offer 第 3题
 
