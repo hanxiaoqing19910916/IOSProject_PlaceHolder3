@@ -1,3 +1,25 @@
+tcp/ip
+应用层：
+传输层：
+网络层:
+数据链路层：
+osi ：
+应用层
+表示层
+会话层
+传输层
+网络层
+物理层
+
+最大tcp连接为客户端ip数×客户端port数，对IPV4，不考虑ip地址分类等因素，最大tcp连接数约为2的32次方（ip数）×2的16次方（port数），也就是server端单机最大tcp连接数约为2的48次方
+
+socket的引入是为了解决不同计算机间进程间通信的问题
+socket与进程间的关系:socket   用来让一个进程和其他的进程互通信息(IPC)，而Socket接口是TCP/IP网络的API接口函数。
+
+
+
+
+
 一:view事件处理
 1.发生事件的时候，会把事件加入到由UIApplication对象管理的队列里面
 2.UIApplication会取出最前的事件分发给主窗口keywindow
