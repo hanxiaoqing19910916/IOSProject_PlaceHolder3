@@ -45,12 +45,63 @@ NSScrollView分类动态绑定一个HXRefreshHeader HXRefreshFooter属性
 通过控制clipview contentInsets 把内容view 往上或者下挤压，从而露出header/footer
 
 
+runtime：
+动态类型：程序直到执行时才能确定所属的类。
+动态绑定：程序直到执行时才能确定实际要调用的方法。
+动态加载：根据需求加载所需要的资源
+
+Runtime消息机制
+
+首先通过obj的isa指针找到obj对应的class。
+
+首先检测这个 selector 是不是要忽略。比如有了ARC就不理会 retain，release 这些函数。
+检测这个 selector 的 target 是不是 nil，Objc 允许我们对一个 nil 对象执行任何方法不会 Crash，因为运行时会被忽略掉。
+如果上面两步都通过了，那么就开始查找这个类的实现 IMP，
+
+在Class中先去cache中 通过SEL查找对应函数method，找到就执行对应的实现。
+
+若cache中未找到，再去methodList中查找，找到就执行对应的实现。
+
+若methodlist中未找到，则取superClass中查找（重复执行以上两个步骤），直到找到最根的类为止。
+若任何一部能找到，则将method加 入到cache中，以方便下次查找，并通过method中的函数指针跳转到对应的函数中去执行。
+如果以上都不能找到，则会开始进行消息转发
+
+消息转发
+1.动态方法解析：向当前类发送 resolveInstanceMethod: 信号，检查是否动态向该类添加了方法。（迷茫请搜索：@dynamic）
+2.快速消息转发：检查该类是否实现了 forwardingTargetForSelector: 方法，若实现了则调用这个方法。若该方法返回值对象非nil或非self，则向该返回对象重新发送消息。
+3.标准消息转发：runtime发送methodSignatureForSelector:消息获取Selector对应的方法签名。返回值非空则通过forwardInvocation:转发消息，返回值为空则向当前对象发送doesNotRecognizeSelector:消息，程序崩溃退出
+
+在一个函数找不到时，OC提供了三种方式去补救：
+1、调用resolveInstanceMethod给个机会让类添加这个实现这个函数
+2、调用forwardingTargetForSelector让别的对象去执行这个函数
+3、调用forwardInvocation（函数执行器）灵活的将目标函数以其他形式执行。 如果都不中，调用doesNotRecognizeSelector抛出异常。
+
+KVC原理：
+KVC运用了一个isa-swizzling类型混合指针机制通过isa-swizzling，来实现其内部查找定位的。isa指针，如其名称所指，（就是is a kind of的意思），指向维护分发表的对象的类。该分发表实际上包含了指向实现类中的方法的指针，和其它数据。
+
+[dic setVaule:@"zhangsan" forKey:@"name"];
+
+当运行的时候就会被编译成：
+SEL sel = sel_get_uid("setValue:forKey:");
+IMP method = objc_msg_lookup(dic->isa,sel);
+method(dic,sel,@"zhangsan",@"name");
+
+其中，sel_get_uid函数是通过方法名得到一个方法选择器。
+objc_msg_lookup:如果我们想用OC运行函数得到一个IMP，就可以使用objc_msg_lookup函数 。
+这样KVC内部实现就可以这样描述了：
+
+一个对象在调用setValue的时候，
+1、根据方法名找到运行方法的时候所需要的环境参数。
+2、他会从自己isa指针结合环境参数，找到具体的方法实现接口。
+3、再直接查找得到的具体的方法实现。
+
+
+KVO原理：
+系统就会在运行期动态地创建该类的一个派生类，在这个派生类中重写基类中任何被观察属性的 setter 方法。
+重写了 class 方法以“欺骗”外部调用者它就是起初的那个类。然后系统将这个对象的 isa 指针指向这个新诞生的派生类
+
+
 键盘鼠标事件：
-
-
-
-
-
 
 
 
@@ -58,6 +109,9 @@ NSScrollView分类动态绑定一个HXRefreshHeader HXRefreshFooter属性
 http状态码请求头，行，体，响应头，行，体。    https ipv4/ipv6等知识点
 
 线程锁
+
+runloop
+
 
 
 
