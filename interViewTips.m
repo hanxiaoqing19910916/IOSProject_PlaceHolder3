@@ -105,8 +105,51 @@ KVO原理：
 
 
 
+http状态码请求行，头，体，响应行，头，体。
+200 - 服务器成功返回数据
+304 - 客户端缓存
+400 - 请求限制
+404 - 链接网页或者数据不存在
+500 - 服务器内部错误
+503 - 服务器出错
+、、、、、、、、、、、、、、、、、、、、、、、、
+请求行包括：
+请求method ：POST/GET
+资源地址：/sample.jsp
+协议版本：HTTP/1.1
 
-http状态码请求头，行，体，响应头，行，体。    https ipv4/ipv6等知识点
+请求头大概包括：
+content-type :资源类型
+cookie：
+Connection:Keep-Alive
+Host:localhostUser-Agent:Mozila/4.0(compatible:MSIE5.01:Windows NT5.0)
+content-Length：数据长度
+
+请求体 就是具体的数据
+、、、、、、、、、、、、、、、、、、、、、、、、
+
+响应行包括
+协议版本：HTTP/1.1   状态码400  描述：bad request
+
+响应头大概包括：
+content-type :资源类型
+content-Length：数据长度
+Connection: close
+Server:
+cache-control:
+
+响应体 就是具体的数据
+、、、、、、、、、、、、、、、、、、、、、、、、
+
+
+
+https
+
+
+
+
+
+ipv4/ipv6等知识点
 
 线程锁
 
