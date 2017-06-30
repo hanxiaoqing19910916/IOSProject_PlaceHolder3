@@ -42,6 +42,7 @@
 //https://bestswifter.com/uikitxing-neng-diao-you-shi-zhan-jiang-jie/ UIKIT性能调优实战
 //http://blog.csdn.net/axllll/article/details/53926144  runtime源码探究（二）strong的实现
 //http://www.jianshu.com/p/74d669592349 iOS巩基之 不再纠结实例变量&属性
+//http://www.cocoachina.com/ios/20160516/16273.html 你真的了解load方法么？
 /*
 百度
 
