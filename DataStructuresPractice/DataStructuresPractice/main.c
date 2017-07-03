@@ -65,5 +65,13 @@ int main(int argc, const char * argv[]) {
 //    char s[] = "abc";
 //    permutation(s,0,2);
 //    return 0;
-    TestInsertSort();
+    TestselectSort();
+    
+    
+    int a = 1,b = 2;
+    
+    __swap(&a,&b);
+    
+    
+    
 }

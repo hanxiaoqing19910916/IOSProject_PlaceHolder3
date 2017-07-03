@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		33C6B8A31ECB3FF60025A97A /* recursion.c in Sources */ = {isa = PBXBuildFile; fileRef = 33C6B8A21ECB3FDD0025A97A /* recursion.c */; };
+		8A466F811F0A2147001021D9 /* SwapValues.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A466F801F0A2147001021D9 /* SwapValues.c */; };
+		8A466F831F0A2759001021D9 /* SelectSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A466F821F0A2759001021D9 /* SelectSort.c */; };
+		8A466F851F0A2D2D001021D9 /* BubbleSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A466F841F0A2D2D001021D9 /* BubbleSort.c */; };
 		8AA0289E1F09EB98002B0414 /* InsetSort.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AA0289D1F09EB98002B0414 /* InsetSort.c */; };
 		8ACE397E1EC018E5000D0E76 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE397D1EC018E5000D0E76 /* main.c */; };
 		8ACE39871EC01904000D0E76 /* BTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE39851EC01904000D0E76 /* BTree.c */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		33C6B8A21ECB3FDD0025A97A /* recursion.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = recursion.c; sourceTree = "<group>"; };
+		8A466F801F0A2147001021D9 /* SwapValues.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SwapValues.c; sourceTree = "<group>"; };
+		8A466F821F0A2759001021D9 /* SelectSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SelectSort.c; sourceTree = "<group>"; };
+		8A466F841F0A2D2D001021D9 /* BubbleSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BubbleSort.c; sourceTree = "<group>"; };
 		8AA0289D1F09EB98002B0414 /* InsetSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = InsetSort.c; sourceTree = "<group>"; };
 		8ACE397A1EC018E5000D0E76 /* DataStructuresPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructuresPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACE397D1EC018E5000D0E76 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -54,10 +60,20 @@
 			path = Recursion;
 			sourceTree = "<group>";
 		};
+		8A466F7F1F0A212B001021D9 /* commentUse */ = {
+			isa = PBXGroup;
+			children = (
+				8A466F801F0A2147001021D9 /* SwapValues.c */,
+			);
+			path = commentUse;
+			sourceTree = "<group>";
+		};
 		8AA0289C1F09EB62002B0414 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
 				8AA0289D1F09EB98002B0414 /* InsetSort.c */,
+				8A466F821F0A2759001021D9 /* SelectSort.c */,
+				8A466F841F0A2D2D001021D9 /* BubbleSort.c */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -81,6 +97,7 @@
 		8ACE397C1EC018E5000D0E76 /* DataStructuresPractice */ = {
 			isa = PBXGroup;
 			children = (
+				8A466F7F1F0A212B001021D9 /* commentUse */,
 				8AA0289C1F09EB62002B0414 /* Sort */,
 				33C6B8A11ECB3FDD0025A97A /* Recursion */,
 				8ACE39841EC01904000D0E76 /* Tree */,
@@ -157,6 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ACE39871EC01904000D0E76 /* BTree.c in Sources */,
+				8A466F831F0A2759001021D9 /* SelectSort.c in Sources */,
+				8A466F851F0A2D2D001021D9 /* BubbleSort.c in Sources */,
+				8A466F811F0A2147001021D9 /* SwapValues.c in Sources */,
 				8ACE397E1EC018E5000D0E76 /* main.c in Sources */,
 				33C6B8A31ECB3FF60025A97A /* recursion.c in Sources */,
 				8AA0289E1F09EB98002B0414 /* InsetSort.c in Sources */,
