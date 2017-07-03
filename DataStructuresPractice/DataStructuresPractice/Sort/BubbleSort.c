@@ -11,5 +11,24 @@
 
 void bubbleSort(int array[],int length)
 {
+    for (int i  = 0 ; i < length; i ++) {
+        for (int j = length - 1; j > i; j--) {
+            if (array[j] < array[j - 1]) {
+                __swapArray(array,j,j - 1);
+                // temp = array[j];
+            }
+        }
+    }
+}
+
+
+void TestbubbleSort()
+{
+    int a[5] = {1,6,3,9,2};
     
+    bubbleSort(a,5);
+    
+    for (int index = 0; index < 5; index ++) {
+        printf("%d \n",a[index]);
+    }
 }

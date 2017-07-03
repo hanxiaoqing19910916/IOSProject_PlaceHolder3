@@ -65,7 +65,7 @@ int main(int argc, const char * argv[]) {
 //    char s[] = "abc";
 //    permutation(s,0,2);
 //    return 0;
-    TestselectSort();
+    TestbubbleSort();
     
     
     int a = 1,b = 2;
