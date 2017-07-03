@@ -62,7 +62,8 @@ int main(int argc, const char * argv[]) {
     //    testFabonacci();
     //    hannota(3,'a','b','c');
     
-    char s[] = "abc";
-    permutation(s,0,2);
-    return 0;
+//    char s[] = "abc";
+//    permutation(s,0,2);
+//    return 0;
+    TestInsertSort();
 }
