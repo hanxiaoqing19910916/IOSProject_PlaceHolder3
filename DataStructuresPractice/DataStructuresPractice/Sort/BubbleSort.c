@@ -15,7 +15,6 @@ void bubbleSort(int array[],int length)
         for (int j = length - 1; j > i; j--) {
             if (array[j] < array[j - 1]) {
                 __swapArray(array,j,j - 1);
-                // temp = array[j];
             }
         }
     }
