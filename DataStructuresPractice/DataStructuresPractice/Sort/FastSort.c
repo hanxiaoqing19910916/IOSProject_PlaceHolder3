@@ -38,6 +38,7 @@ int findPos(int array[], int low, int high)
         }
         array[high] = array[low];
     }
+    array[low] = temp;
     return high;
 }
 
