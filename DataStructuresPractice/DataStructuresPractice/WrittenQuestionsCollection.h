@@ -43,6 +43,8 @@
 
 //http://www.cocoachina.com/ios/20141031/10105.html Objective-C Runtime 运行时之一：类与对象
 
+//http://www.cocoachina.com/ios/20170328/18962.html iOS 底层解析weak的实现原理（包含weak对象的初始化，引用，释放的分析）
+
 //http://blog.csdn.net/axllll/article/details/52661374  runtime源码探究（一） weak的实现
 //http://blog.csdn.net/axllll/article/details/53926144  runtime源码探究（二）strong的实现
 

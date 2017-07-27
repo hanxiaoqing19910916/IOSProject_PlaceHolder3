@@ -10,6 +10,9 @@
 #import "KVCExample.h"
 
 #import "Immessage.pbobjc.h" //模型
+#import "VendorALL.h"
+#import "ClassToolAll.h"
+#import "HXConst.h"
 
 @interface ViewController ()
 
@@ -45,8 +48,30 @@
 
     NSLog(@"--%@",per.name);
     
+    
+
+    
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+
+    [NSString validateEmail:@"da"];
+    
+    HXApiManager *mag = [HXApiManager manager];
+    mag.urlStirng = @"http://www.baidu.com";
+    NSDictionary *d = @{@"a":@"b"};
+    [mag loadGETwithService:nil params:d success:^(HXResponsResult *response) {
+        
+
+        
+        
+    } fail:^(HXResponsResult *response) {
+        NSLog(@"---%@",response.resError);
+    }];
+    
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
