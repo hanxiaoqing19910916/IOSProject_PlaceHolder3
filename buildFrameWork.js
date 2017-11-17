@@ -5,42 +5,68 @@ var process = require('process');
 var childProcess = require('child_process');
 var fs = require('fs');
 
-
-
+// 系统用户目录
 var usrFolder = os.homedir();
-
+// xcode缓存目录
 var xcodeDerivedDataFolder = path.join(usrFolder,'Library/Developer/Xcode/DerivedData');
-var productFolder = xcodeDerivedDataFolder + '/LoginUI-djmwazueazvyzgabzmuyspdyvlsu/Build/Products';
 
+// productFolder指的是xcode build生成文件的目录，可根据外部命令参数传递
+var productFolder = `${xcodeDerivedDataFolder}/LoginUI-djmwazueazvyzgabzmuyspdyvlsu/Build/Products`;
+if (process.argv[2]) {
+    productFolder = process.argv[2];
+    console.log(`set productFolder: ${productFolder}`);
+}
+
+// build静态库target名字
+var targetProductName = 'ZYXFramework';
+if (process.argv[3]) {
+    targetProductName = process.argv[3];
+    console.log(`set targetProductName: ${targetProductName}`);
+}
+
+// 切换要执行lipo命令的目录
 process.chdir(productFolder);
-
 var currentExecDir = process.cwd();
-console.log(currentExecDir);
+// console.log(currentExecDir);
 
-var simulatorLib = currentExecDir +'/Release-iphonesimulator/ZYXFramework.framework/ZYXFramework';
-var iphoneosLib = currentExecDir +'/Release-iphoneos/ZYXFramework.framework/ZYXFramework';
-var outputfile = usrFolder + '/Desktop/ZYXFramework';
+var simulatorLib = `${currentExecDir}/Release-iphonesimulator/${targetProductName}.framework/${targetProductName}`;
+var iphoneosLib = `${currentExecDir}/Release-iphoneos/${targetProductName}.framework/${targetProductName}`;
+
+var outputfile = `${usrFolder}/Desktop/${targetProductName}`;
+
 
 var execShell = 'lipo -create ' + simulatorLib + ' ' + iphoneosLib + ' -output ' + outputfile;
-childProcess.exec(execShell,function (error, stdout, stderr) {
-    if (error !== null) {
-        console.log('exec error: ' + error);
-        return;
-    }
-    if (fs.existsSync(outputfile)) {
-        console.log(fs.statSync(outputfile).birthtime.toString());
 
-        var src = currentExecDir +'/Release-iphoneos/ZYXFramework.framework';
-        var des = usrFolder + '/Desktop/ZYXFramework.framework';
 
-        if (fs.statSync(src).isDirectory()) { //ZYXFramework.framework其实是个文件夹
-            copyDir(src,des,() => {
-                fs.copyFileSync(outputfile, des + '/ZYXFramework');
-            });
+var p = new Promise((resolve, reject) => {
+    childProcess.exec(execShell,(error, stdout, stderr) => {
+        if (error) {
+            reject(error);
         }
+        if (fs.existsSync(outputfile)) {
+            resolve(stdout);
+        }
+    });
+}).then((stdout) => {
+
+    console.log(fs.statSync(outputfile).birthtime.toString());
+    // console.log(path.dirname(simulatorLib));
+
+    let src = path.dirname(simulatorLib);
+    let des = `${usrFolder}/Desktop/${targetProductName}.framework`;
+
+    if (fs.statSync(src).isDirectory()) { //ZYXFramework.framework其实是个文件夹
+        copyDir(src,des,() => {
+            var desFileName = `${des}/${targetProductName}`;
+            fs.copyFileSync(outputfile, desFileName);
+        });
     }
 
-});
+},(err) => {
+    console.log('exec error: ' + error);
+})
+
+
 
 
 
