@@ -3,8 +3,7 @@
 //  DataStructuresPractice
 //
 //  Created by hanxiaoqing on 2017/5/8.
-//  Copyright © 2017年 BabelTime. All rights reserved.
-//
+
 
 #include <stdio.h>
 #include "BTree.h"
