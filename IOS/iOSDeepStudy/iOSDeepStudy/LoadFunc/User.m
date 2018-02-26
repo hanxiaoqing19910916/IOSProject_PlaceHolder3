@@ -1,14 +1,14 @@
 //
-//  WellUser.m
+//  User.m
 //  iOSDeepStudy
 //
 //  Created by hanxiaoqing on 2018/2/26.
 //  Copyright © 2018年 hanxiaoqing. All rights reserved.
 //
 
-#import "WellUser.h"
+#import "User.h"
 
-@implementation WellUser
+@implementation User
 
 + (void)load
 {
@@ -17,15 +17,13 @@
 
 @end
 
-
-
 //------------------------------------------------------------------------------------------
 
-@implementation WellUser(extention)
+@implementation User(extention)
 
 + (void)load
 {
-   [super load];
+    [super load];
 }
 
 

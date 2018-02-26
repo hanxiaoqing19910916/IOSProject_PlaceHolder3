@@ -18,6 +18,8 @@
 		8A73F02E2043ABB400ABDC67 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F0252043ABB400ABDC67 /* UIViewExt.m */; };
 		8A73F0322043AE1E00ABDC67 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F0312043AE1E00ABDC67 /* User.m */; };
 		8A73F0352043AE3200ABDC67 /* WellUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F0342043AE3200ABDC67 /* WellUser.m */; };
+		8A73F0392043E32B00ABDC67 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F0382043E32B00ABDC67 /* Person.m */; };
+		8A73F03C2043E34100ABDC67 /* WellPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F03B2043E34100ABDC67 /* WellPerson.m */; };
 		8A895E8A1F29BA2C00CFB936 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A895E891F29BA2C00CFB936 /* libsqlite3.tbd */; };
 		8A895EA41F29C32100CFB936 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A895E9D1F29C32100CFB936 /* NSDate+Extension.m */; };
 		8A895EA51F29C32100CFB936 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A895E9F1F29C32100CFB936 /* NSString+Extension.m */; };
@@ -55,6 +57,10 @@
 		8A73F0312043AE1E00ABDC67 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8A73F0332043AE3200ABDC67 /* WellUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WellUser.h; sourceTree = "<group>"; };
 		8A73F0342043AE3200ABDC67 /* WellUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WellUser.m; sourceTree = "<group>"; };
+		8A73F0372043E32B00ABDC67 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		8A73F0382043E32B00ABDC67 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		8A73F03A2043E34100ABDC67 /* WellPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WellPerson.h; sourceTree = "<group>"; };
+		8A73F03B2043E34100ABDC67 /* WellPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WellPerson.m; sourceTree = "<group>"; };
 		8A895E891F29BA2C00CFB936 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8A895E911F29BEDA00CFB936 /* HXConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXConst.h; sourceTree = "<group>"; };
 		8A895E9C1F29C32100CFB936 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
@@ -181,7 +187,7 @@
 			path = UIViewExt;
 			sourceTree = "<group>";
 		};
-		8A73F02F2043AD1500ABDC67 /* Load_Initialize */ = {
+		8A73F02F2043AD1500ABDC67 /* LoadFunc */ = {
 			isa = PBXGroup;
 			children = (
 				8A73F0302043AE1E00ABDC67 /* User.h */,
@@ -189,7 +195,18 @@
 				8A73F0332043AE3200ABDC67 /* WellUser.h */,
 				8A73F0342043AE3200ABDC67 /* WellUser.m */,
 			);
-			path = Load_Initialize;
+			path = LoadFunc;
+			sourceTree = "<group>";
+		};
+		8A73F0362043E30100ABDC67 /* initializeFunc */ = {
+			isa = PBXGroup;
+			children = (
+				8A73F0372043E32B00ABDC67 /* Person.h */,
+				8A73F0382043E32B00ABDC67 /* Person.m */,
+				8A73F03A2043E34100ABDC67 /* WellPerson.h */,
+				8A73F03B2043E34100ABDC67 /* WellPerson.m */,
+			);
+			path = initializeFunc;
 			sourceTree = "<group>";
 		};
 		8A895D721F29B98400CFB936 /* DependLib */ = {
@@ -265,7 +282,8 @@
 		8ABFA4241EFCE6A700D2ECCD /* iOSDeepStudy */ = {
 			isa = PBXGroup;
 			children = (
-				8A73F02F2043AD1500ABDC67 /* Load_Initialize */,
+				8A73F0362043E30100ABDC67 /* initializeFunc */,
+				8A73F02F2043AD1500ABDC67 /* LoadFunc */,
 				8A9B0A0E1F00F5460033F07F /* KVC */,
 				8ABFA4281EFCE6A700D2ECCD /* AppDelegate.h */,
 				8ABFA4291EFCE6A700D2ECCD /* AppDelegate.m */,
@@ -363,6 +381,7 @@
 			files = (
 				8A73F0352043AE3200ABDC67 /* WellUser.m in Sources */,
 				8A73F0292043ABB400ABDC67 /* UITextView+Placeholder.m in Sources */,
+				8A73F0392043E32B00ABDC67 /* Person.m in Sources */,
 				8A895EA71F29C32100CFB936 /* UIView+Extension.m in Sources */,
 				8ABFA42D1EFCE6A700D2ECCD /* ViewController.m in Sources */,
 				8A73F0282043ABB400ABDC67 /* UILabel+AttributedString.m in Sources */,
@@ -370,6 +389,7 @@
 				8ABFA42A1EFCE6A700D2ECCD /* AppDelegate.m in Sources */,
 				8A73F0272043ABB400ABDC67 /* UIColor+CateColor.m in Sources */,
 				8A73F02D2043ABB400ABDC67 /* UIViewController+NavBar.m in Sources */,
+				8A73F03C2043E34100ABDC67 /* WellPerson.m in Sources */,
 				8A73F0262043ABB400ABDC67 /* NSString+CateString.m in Sources */,
 				8ABFA4271EFCE6A700D2ECCD /* main.m in Sources */,
 				8A73F02E2043ABB400ABDC67 /* UIViewExt.m in Sources */,
