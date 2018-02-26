@@ -12,6 +12,8 @@
 #import "ClassToolAll.h"
 #import "HXConst.h"
 
+#import "WellUser.h"
+
 @interface ViewController ()
 
 @end
@@ -31,7 +33,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-
+   // WellUser *wu = [[WellUser alloc] init];
+  
 
 }
 
