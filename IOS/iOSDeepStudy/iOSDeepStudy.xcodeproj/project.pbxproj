@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A2D8B1C204D13C1000F4FBC /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D8B1B204D13C1000F4FBC /* BankAccount.m */; };
 		8A73F0262043ABB400ABDC67 /* NSString+CateString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F00F2043ABB400ABDC67 /* NSString+CateString.m */; };
 		8A73F0272043ABB400ABDC67 /* UIColor+CateColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F0122043ABB400ABDC67 /* UIColor+CateColor.m */; };
 		8A73F0282043ABB400ABDC67 /* UILabel+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73F0152043ABB400ABDC67 /* UILabel+AttributedString.m */; };
@@ -35,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A2D8B1A204D13C1000F4FBC /* BankAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
+		8A2D8B1B204D13C1000F4FBC /* BankAccount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
 		8A73F00C2043ABB400ABDC67 /* ClassToolAll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassToolAll.h; sourceTree = "<group>"; };
 		8A73F00E2043ABB400ABDC67 /* NSString+CateString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CateString.h"; sourceTree = "<group>"; };
 		8A73F00F2043ABB400ABDC67 /* NSString+CateString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CateString.m"; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 			children = (
 				8A9B0A0F1F00F5460033F07F /* KVCExample.h */,
 				8A9B0A101F00F5460033F07F /* KVCExample.m */,
+				8A2D8B1A204D13C1000F4FBC /* BankAccount.h */,
+				8A2D8B1B204D13C1000F4FBC /* BankAccount.m */,
 			);
 			path = KVC;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				8ABFA42D1EFCE6A700D2ECCD /* ViewController.m in Sources */,
 				8A73F0282043ABB400ABDC67 /* UILabel+AttributedString.m in Sources */,
 				8A73F0322043AE1E00ABDC67 /* User.m in Sources */,
+				8A2D8B1C204D13C1000F4FBC /* BankAccount.m in Sources */,
 				8ABFA42A1EFCE6A700D2ECCD /* AppDelegate.m in Sources */,
 				8A73F0272043ABB400ABDC67 /* UIColor+CateColor.m in Sources */,
 				8A73F02D2043ABB400ABDC67 /* UIViewController+NavBar.m in Sources */,
